@@ -6,6 +6,73 @@
  */
 public class OneOfEachStats1 {
 	public static void main (String[] args) {
-		//// Put your code here
+		int t = Integer.parseInt(args[0]);
+		int twochildren = 0;
+		int threechildren = 0; 
+		int fourchildren = 0; 
+		double sumall = 0.0;
+		double average = 0;
+		String common ;
+
+		for ( int i = 1; i <= t ; i++) {
+			{
+
+			boolean girl = false; 
+			boolean boy = false; 
+			int sum = 0;
+
+			while (girl == false || boy == false){
+				double a = (Math.random() );
+				if (a >= 0.5){
+				girl = true;
+
+			}
+
+			else {
+				boy = true;
+
+			}
+			sum += 1;
+
+			if (sum == 2) {
+				twochildren += 1;
+			}
+			else if (sum == 3){
+				threechildren +=1;
+			}
+			else {
+				fourchildren +=1;
+			}
+	
+		}
+		sumall += sum;
+
+
+	}
+	 
+	average = sumall / t;
+
+	if (twochildren >= threechildren && twochildren >= fourchildren){
+		common = "2.";
+	}
+	else if (threechildren >= twochildren && threechildren >= fourchildren){
+		common = "3.";
+	}
+	else{
+		common = "4 or more.";
+	}
+
+
+
+	System.out.println("Average: " +average+ " children to get at least one of each gender.");
+	System.out.println("Number of families with 2 children: " +twochildren);
+	System.out.println("Number of families with 3 children: " +threechildren);
+	System.out.println("Number of families with 4 or more children: " +fourchildren);
+	System.out.println("The most common number of children is " +common);
+
+ 	}
+ 		
 	}
 }
+
+
