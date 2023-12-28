@@ -15,7 +15,6 @@ public class OneOfEachStats1 {
 		String common ;
 
 		for ( int i = 1; i <= t ; i++) {
-			{
 
 			boolean girl = false; 
 			boolean boy = false; 
@@ -72,7 +71,6 @@ public class OneOfEachStats1 {
 
  	}
  		
-	}
 }
 
 

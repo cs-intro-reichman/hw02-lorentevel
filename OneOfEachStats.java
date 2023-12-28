@@ -33,7 +33,6 @@ public class OneOfEachStats {
 		String common ;
 
 		for ( int i = 1; i <= t ; i++) {
-			{
 
 			boolean girl = false; 
 			boolean boy = false; 
@@ -83,14 +82,13 @@ public class OneOfEachStats {
 
 
 	System.out.println("Average: " +average+ " children to get at least one of each gender.");
-	System.out.println("Number of families with 2 children: " +twochildren);
-	System.out.println("Number of families with 3 children: " +threechildren);
-	System.out.println("Number of families with 4 or more children: " +fourchildren);
-	System.out.println("The most common number of children is " +common);
+	System.out.println("Number of families with 2 children: "+ twochildren);
+	System.out.println("Number of families with 3 children: "+ threechildren);
+	System.out.println("Number of families with 4 or more children: "+ fourchildren);
+	System.out.println("The most common number of children is "+ common);
 
  	}
  		
-	}
 	}  
 	
 
