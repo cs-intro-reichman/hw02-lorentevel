@@ -32,7 +32,7 @@ public class OneOfEachStats {
 		double average = 0;
 		String common ;
 
-		for ( int i = 1; i <= t ; i++) {
+		for ( int i = 0; i < t ; i++) {
 
 			boolean girl = false; 
 			boolean boy = false; 
@@ -41,31 +41,29 @@ public class OneOfEachStats {
 			while (girl == false || boy == false){
 				double a = generator.nextDouble();
 				if (a >= 0.5){
-				girl = true;
+					girl = true;
 
+				}
+
+				else {
+					boy = true;
+
+				}
+				sum ++;
 			}
-
-			else {
-				boy = true;
-
-			}
-			sum += 1;
-
+			sumall += sum;
 			if (sum == 2) {
-				twochildren += 1;
+				twochildren ++;
 			}
 			else if (sum == 3){
-				threechildren +=1;
+				threechildren ++;
 			}
-			else {
-				fourchildren +=1;
+			else if (sum >= 4) {
+				fourchildren ++;
 			}
-	
+		
+
 		}
-		sumall += sum;
-
-
-	}
 	 
 	average = sumall / t;
 
@@ -82,13 +80,12 @@ public class OneOfEachStats {
 
 
 	System.out.println("Average: " +average+ " children to get at least one of each gender.");
-	System.out.println("Number of families with 2 children: "+ twochildren);
-	System.out.println("Number of families with 3 children: "+ threechildren);
-	System.out.println("Number of families with 4 or more children: "+ fourchildren);
-	System.out.println("The most common number of children is "+ common);
+	System.out.println("Number of families with 2 children: " +twochildren);
+	System.out.println("Number of families with 3 children: " +threechildren);
+	System.out.println("Number of families with 4 or more children: " +fourchildren);
+	System.out.println("The most common number of children is " +common);
 
  	}
  		
-	}  
-	
+}
 

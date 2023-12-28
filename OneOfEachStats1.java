@@ -14,7 +14,7 @@ public class OneOfEachStats1 {
 		double average = 0;
 		String common ;
 
-		for ( int i = 1; i <= t ; i++) {
+		for ( int i = 0; i < t ; i++) {
 
 			boolean girl = false; 
 			boolean boy = false; 
@@ -23,31 +23,29 @@ public class OneOfEachStats1 {
 			while (girl == false || boy == false){
 				double a = (Math.random() );
 				if (a >= 0.5){
-				girl = true;
+					girl = true;
 
+				}
+
+				else {
+					boy = true;
+
+				}
+				sum ++;
 			}
-
-			else {
-				boy = true;
-
-			}
-			sum += 1;
-
+			sumall += sum;
 			if (sum == 2) {
-				twochildren += 1;
+				twochildren ++;
 			}
 			else if (sum == 3){
-				threechildren +=1;
+				threechildren ++;
 			}
-			else {
-				fourchildren +=1;
+			else if (sum >= 4) {
+				fourchildren ++;
 			}
-	
+		
+
 		}
-		sumall += sum;
-
-
-	}
 	 
 	average = sumall / t;
 
