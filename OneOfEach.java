@@ -9,7 +9,7 @@ public class OneOfEach {
 		boolean boy = false; 
 		int sum = 0;
 
-			while (girl == false || boy == false){
+		while (girl == false || boy == false){
 			double a = (Math.random() );
 			if (a >= 0.5){
 				girl = true;
